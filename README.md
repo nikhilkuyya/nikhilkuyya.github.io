@@ -1,4 +1,3 @@
-
 # Experience 
   I am javascript and web developement enthusiast. 
 
@@ -6,11 +5,15 @@
   Graduate by Education and Software Engineer by Interest.
 
 # Hobbies
-   Workshop
+   * Workshop
        * Technology
-   Reading blogs 
+   * Reading blogs
        * Psychology
        * Scripting
-   Sports 
+   * Sports
        * Basket Ball
-       
+
+# Contact Information
+# Projects
+# Technology Knowledge
+# Title
