@@ -1,5 +1,6 @@
 ## Nikhil Kuyya
 
+## Career Summary
 ## Work Experience
 
   Working as Front End Developer with one year of Experience, previously worked as DOT-NET Developer for one year.
@@ -8,10 +9,10 @@
 
 ## Projects
 
-
 ## Skills
-
-
+   Programming Languages : C#, Python, ECMAScript(Javascript) , Elm , NodeJS, Windows PowerShell
+   Frameworks            : Angular, React, Vue, DOTNET Frameworks
+   
 ## Education
 
 | Degree                    | Institute                                     | Year        |
