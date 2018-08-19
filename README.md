@@ -12,7 +12,7 @@
 
 ## Skills
   <dl>
-  <dt> Programming Languages :</dt> <dd>C#, Python, ECMAScript(Javascript) , Elm , NodeJS, Windows PowerShell</dd>
+  <dt> Programming Languages :</dt> <dd>C#, Python, Javascript , Elm , NodeJS, Windows PowerShell</dd>
    <dt> Frameworks         :</dt> <dd>Angular, React, Vue, DOTNET Frameworks</dd>
   </dl>
    
