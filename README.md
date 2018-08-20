@@ -1,19 +1,16 @@
 ## Nikhil Kuyya
 
 ## Career Summary
+Exploring the world of Front End Developer , Previously worked as DOT-NET Developer.
+I am inclined to work at different technologies with good practices and worked in diverse projects to gain understanding of software development process.
+I like to explore the technologies by attending workshops and develop application in different technologies. I also love to do scripting and automate the things.
 
 ## Work Experience
-
-  Working as Front End Developer with one year of Experience, previously worked as DOT-NET Developer for one year.
-  I am inclined to work at different technologies with good practices and worked in diverse projects to gain understanding of software       development process.
-  I like to explore the technologies by attending workshops and code them by sample application in different technologies. I also love to   do scripting and automate the things.
-
-## Projects
 
 ## Skills
   <dl>
   <dt> Programming Languages :</dt> <dd>C#, Python, Javascript , Elm , NodeJS, Windows PowerShell</dd>
-   <dt> Frameworks         :</dt> <dd>Angular, React, Vue, DOTNET Frameworks</dd>
+   <dt> Frameworks         : </dt> <dd>Angular, React, Vue, DOTNET Frameworks</dd>
   </dl>
    
 ## Education
