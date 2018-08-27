@@ -1,11 +1,20 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Nikhil Kuyya</title>
+    <script src="./elm.js" type="application/javascript"></script>
 </head>
+
 <body>
-    <div>Hello Everyone!!!</div>
+    <div id="resume"></div>
+    <script>
+        Elm.Main.init({
+            node : document.getElementById('resume')
+        })
+    </script>
 </body>
+
 </html>
