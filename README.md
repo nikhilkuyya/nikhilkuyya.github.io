@@ -2,15 +2,14 @@
 
 ## Career Summary
 Exploring the world of Front End Developer , Previously worked as DOT-NET Developer.
-I am inclined to work at different technologies with good practices and worked in diverse projects to gain understanding of software development process.
-I like to explore the technologies by attending workshops and develop application in different technologies. I also love to do scripting and automate the things.
+I am inclined to work in diverse projects with good practices to solidify understanding of software development process.
 
 ## Work Experience
 
 ## Skills
   <dl>
-  <dt> Programming Languages :</dt> <dd>C#, Python, Javascript , Elm , NodeJS, Windows PowerShell</dd>
-   <dt> Frameworks         : </dt> <dd>Angular, React, Vue, DOTNET Frameworks</dd>
+   <dt> Programming Languages :</dt> <dd>Javascript , Elm , Nodejs , C#, Python, Windows PowerShell</dd>
+   <dt> Frameworks         : </dt> <dd>Angular, React, Vue, ASP.NET Framework, DOTNET Framework</dd>
   </dl>
    
 ## Education
@@ -22,11 +21,6 @@ I like to explore the technologies by attending workshops and develop applicatio
  
 
 ## Hobbies
+- I like to explore the technologies by attending workshops and develop application in different technologies. I also love to do scripting and automate    the things.
+- I love play games like Chess, Basket Ball and Video Game FIFA.
 
-- Workshop
-  - Technology
-- Reading blogs
-  - Psychology
-  - Scripting
-- Sports
-  - Basket Ball
