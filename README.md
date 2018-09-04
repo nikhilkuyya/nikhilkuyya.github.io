@@ -26,7 +26,7 @@ I work on Front End Technologies. I also have experience in the Back-End develop
      Explored diverse projects relating DOTNET Framework.
 <li> Implemented features like managing configuration files and databases to Windows Installer.</li>
 <li> United features to Excel Plugin to fetch workbook data.</li>
-<li> Getting Hands-on building and bug fixes for services in automation project.</li>
+<li> Worked on building and bug fixes for services in automation project.</li>
     </dd>
   </dl>
 </div>
