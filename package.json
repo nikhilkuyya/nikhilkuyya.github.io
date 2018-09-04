@@ -1,0 +1,10 @@
+{
+  "name": "nikhilkuyya.github.io",
+  "version": "0.0.0",
+  "description": "about me",
+  "main": "index.js",
+  "repository": "https://github.com/nikhilkuyya/nikhilkuyya.github.io",
+  "author": "nikhilkuyya <nikhilkuyya@gmail.com>",
+  "license": "MIT",
+  "scripts": {}
+}
