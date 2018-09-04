@@ -2,16 +2,15 @@
 
 ## Career Summary
 
-Exploring the world of Front End Developer , Previously worked as DOT-NET Developer.
-I am inclined to work in diverse projects with good practices to solidify understanding of software development process.
+I work on Front End Technologies. I also have experience in the Back-End development. I am inclined to work with different technologies with good practices and worked on diverse projects to gain an understanding of the software development process.
 
 ## Work Experience
 
 ## Skills
 
   <dl>
-   <dt> Programming Languages :</dt> <dd>Javascript , Elm , Nodejs , C#, Python, Windows PowerShell</dd>
-   <dt> Frameworks         : </dt> <dd>Angular, React, Vue, ASP.NET Framework, DOTNET Framework</dd>
+  <dt> Programming Languages :</dt> <dd> C#, Javascript , Elm , Windows PowerShell</dd>
+   <dt> Frameworks         : </dt> <dd> Angular, React, Vue, DOTNET Frameworks</dd>
   </dl>
    
 ## Education
