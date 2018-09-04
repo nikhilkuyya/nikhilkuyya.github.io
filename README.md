@@ -13,21 +13,20 @@ I work on Front End Technologies. I also have experience in the Back-End develop
       <dt>Associate: <br>
       Oct 2017 – Present </dt>
       <dd>
-      Responsible for developing web pages for websites include: 
-      <li> Discussed the requirements clearly and developed the component to work. </li>
-      <li> Explore of best-fit libraries for purpose of requirement implement the algorithm from scratch if needed. </li>
-      <li> Worked on the different sections of the websites and also created documentation for the work. </li>
-      <li> Worked on setting on multilingual support.</li>
+      Responsible for shipping web pages for website.
+      <li> Understanding the requirements clearly and building components for pages.</li>
+      <li> Building modules for pages, from scratch, if need or using appropriate libraries for development.</li>
+      <li> Worked on the distinct sections for websites with documentation for the work.</li>
       </dd>
   </dl>
   <dl>
       <dt>Junior Associate: <br>
       Oct 2016 - Sep 2017</dt>
       <dd>
-      Explored into different projects using DOTNET Framework.
-<li> Implementing feature to Windows Installer like configuration files and DB backup while installation.</li>
-<li> Developing feature to Excel Plugin and performance monitoring to fetch results of excel workbook.</li>
-<li> Worked on Services and CMS Technologies.</li>
+     Explored diverse projects relating DOTNET Framework.
+<li> Implemented features like managing configuration files and databases to Windows Installer.</li>
+<li> United features to Excel Plugin to fetch workbook data.</li>
+<li> Getting Hands-on building and bug fixes for services in automation project.</li>
     </dd>
   </dl>
 </div>
