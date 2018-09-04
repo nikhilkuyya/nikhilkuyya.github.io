@@ -39,11 +39,23 @@ I work on Front End Technologies. I also have experience in the Back-End develop
   </dl>
    
 ## Education
-
-| Degree                     | Institute                               | Year        |
-| -------------------------- | --------------------------------------- | ----------- |
-| Bachelor of Technology     | Indian Institute of Technology Guwahati | 2012 - 2016 |
-| Intermediate (Class - XII) | NRI Junior College, Hyderabad           | March 2012  |
+<table>
+  <tr>
+    <th>Degree</th>
+    <th>Institute</th>
+    <th>Year of Passing</th>
+  </tr>
+  <tr>
+    <td>Bachelor of Technology</td>
+    <td>Indian Institute of Technology Guwahati</td>
+    <td>2012 - 2016</td>
+  </tr>
+  <tr>
+    <td>Intermediate (Class - XII)</td>
+    <td>NRI Junior College, Hyderabad</td>
+    <td>March 2012</td>
+  </tr>
+</table>
 
 ## Hobbies
 
