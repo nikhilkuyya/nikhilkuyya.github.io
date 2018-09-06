@@ -6,7 +6,7 @@ I work on Front End Technologies. I also have experience in the Back-End develop
 
 ## Work Experience
 
-<div><span><b>Nagarro</b><br>
+<div class="company"><span><b>Nagarro</b><br>
           Gurgaon,India</span>
 
   <dl>
@@ -23,10 +23,10 @@ I work on Front End Technologies. I also have experience in the Back-End develop
       <dt>Junior Associate: <br>
       Oct 2016 - Sep 2017</dt>
       <dd>
-     Explored diverse projects relating DOTNET Framework.
-<li> Implemented features like managing configuration files and databases to Windows Installer.</li>
-<li> United features to Excel Plugin to fetch workbook data.</li>
-<li> Worked on building and bug fixes for services in automation project.</li>
+          Explored diverse projects relating DOTNET Framework.
+        <li> Implemented features like managing configuration files and databases to Windows Installer.</li>
+        <li> United features to Excel Plugin to fetch workbook data.</li>
+        <li> Worked on building and bug fixes for services in automation project.</li>
     </dd>
   </dl>
 </div>
@@ -34,8 +34,10 @@ I work on Front End Technologies. I also have experience in the Back-End develop
 ## Skills
 
   <dl>
-  <dt> Programming Languages :</dt> <dd> C#, Javascript , Elm , Windows PowerShell</dd>
-   <dt> Frameworks         : </dt> <dd> Angular, React, Vue, DOTNET Frameworks</dd>
+    <dt> Programming Languages :</dt> 
+    <dd> C#, Javascript , Elm , Windows PowerShell</dd>
+    <dt> Frameworks : </dt> 
+    <dd> Angular, React, Vue, DOTNET Frameworks</dd>
   </dl>
    
 ## Education
@@ -59,5 +61,8 @@ I work on Front End Technologies. I also have experience in the Back-End develop
 
 ## Hobbies
 
-- I like to explore the technologies by attending workshops and develop application in different technologies. I also love to do scripting and automate the things.
-- I love play games like Chess, Basket Ball and Video Game FIFA.
+<ul>
+<li> I like to explore the technologies by attending workshops and develop application in different technologies.</li>
+ <li>I also love to do scripting and automate the things.</li>
+<li> I love play games like Chess, Basket Ball and Video Game FIFA.</li>
+</ul>
