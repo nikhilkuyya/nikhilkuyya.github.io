@@ -6,5 +6,8 @@
   "repository": "https://github.com/nikhilkuyya/nikhilkuyya.github.io",
   "author": "nikhilkuyya <nikhilkuyya@gmail.com>",
   "license": "MIT",
-  "scripts": {}
+  "scripts": {
+    "build:elm": "elm.exe make .\\src\\Main.elm --output .\\dist\\elm.js"
+  },
+  "devDependencies": {}
 }
