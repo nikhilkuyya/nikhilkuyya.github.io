@@ -4787,6 +4787,8 @@ var author$project$Main$init = function (_n0) {
 var author$project$Main$ResumeContent = function (a) {
 	return {$: 'ResumeContent', a: a};
 };
+var elm$json$Json$Decode$value = _Json_decodeValue;
+var author$project$Main$onFetchingData = _Platform_incomingPort('onFetchingData', elm$json$Json$Decode$value);
 var elm$json$Json$Decode$map2 = _Json_map2;
 var NoRedInk$json_decode_pipeline$Json$Decode$Pipeline$custom = elm$json$Json$Decode$map2(elm$core$Basics$apR);
 var elm$json$Json$Decode$andThen = _Json_andThen;
@@ -4795,7 +4797,6 @@ var elm$json$Json$Decode$fail = _Json_fail;
 var elm$json$Json$Decode$null = _Json_decodeNull;
 var elm$json$Json$Decode$oneOf = _Json_oneOf;
 var elm$json$Json$Decode$succeed = _Json_succeed;
-var elm$json$Json$Decode$value = _Json_decodeValue;
 var NoRedInk$json_decode_pipeline$Json$Decode$Pipeline$optionalDecoder = F3(
 	function (pathDecoder, valDecoder, fallback) {
 		var nullOr = function (decoder) {
@@ -4924,7 +4925,7 @@ try {
 } catch ($) {
 throw 'Some top-level definitions from `Main` are causing infinite recursion:\n\n  ┌─────┐\n  │    resumeSectionDecoder\n  │     ↓\n  │    resumeSectionDataDecoder\n  └─────┘\n\nThese errors are very tricky, so read https://elm-lang.org/0.19.0/halting-problem to learn how to fix it!';}
 var author$project$Main$resumeDataDecoder = elm$json$Json$Decode$list(author$project$Main$resumeSectionDecoder);
-var author$project$Main$decode = function (payload) {
+var author$project$Main$runResumeModelDecoder = function (payload) {
 	var _n0 = A2(elm$json$Json$Decode$decodeValue, author$project$Main$resumeDataDecoder, payload);
 	if (_n0.$ === 'Ok') {
 		var resumeContent = _n0.a;
@@ -4941,12 +4942,11 @@ var author$project$Main$decode = function (payload) {
 					elm$json$Json$Decode$errorToString(err))));
 	}
 };
-var author$project$Main$onFetchingData = _Platform_incomingPort('onFetchingData', elm$json$Json$Decode$value);
 var author$project$Main$subscriptions = function (_n0) {
 	return author$project$Main$onFetchingData(
 		function (payload) {
 			return author$project$Main$ResumeContent(
-				author$project$Main$decode(payload));
+				author$project$Main$runResumeModelDecoder(payload));
 		});
 };
 var author$project$Main$update = F2(
@@ -5043,7 +5043,7 @@ var elm$virtual_dom$VirtualDom$toHandlerInt = function (handler) {
 	}
 };
 var elm$html$Html$div = _VirtualDom_node('div');
-var elm$html$Html$h1 = _VirtualDom_node('h1');
+var elm$html$Html$strong = _VirtualDom_node('strong');
 var elm$virtual_dom$VirtualDom$text = _VirtualDom_text;
 var elm$html$Html$text = elm$virtual_dom$VirtualDom$text;
 var elm$json$Json$Encode$string = _Json_wrap;
@@ -5078,12 +5078,13 @@ var author$project$Main$resumeSectionVew = function (section) {
 		elm$html$Html$div,
 		_List_fromArray(
 			[
-				elm$html$Html$Attributes$class(section._class)
+				elm$html$Html$Attributes$class(section._class),
+				elm$html$Html$Attributes$class('section-format')
 			]),
 		_List_fromArray(
 			[
 				A2(
-				elm$html$Html$h1,
+				elm$html$Html$strong,
 				_List_Nil,
 				_List_fromArray(
 					[
@@ -5099,7 +5100,10 @@ var author$project$Main$resumeSectionVew = function (section) {
 var author$project$Main$view = function (model) {
 	return A2(
 		elm$html$Html$div,
-		_List_Nil,
+		_List_fromArray(
+			[
+				elm$html$Html$Attributes$class('resume')
+			]),
 		A2(elm$core$List$map, author$project$Main$resumeSectionVew, model));
 };
 var elm$browser$Browser$External = function (a) {

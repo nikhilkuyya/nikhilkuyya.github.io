@@ -81,14 +81,14 @@ update msg model =
 
 subscriptions : ResumeModel -> Sub Msg
 subscriptions _ =
-    onFetchingData (\payload -> ResumeContent <| decode payload)
+    onFetchingData (\payload -> ResumeContent <| runResumeModelDecoder payload)
 
 
 port onFetchingData : (Encode.Value -> msg) -> Sub msg
 
 
-decode : Encode.Value -> ResumeModel
-decode payload =
+runResumeModelDecoder : Encode.Value -> ResumeModel
+runResumeModelDecoder payload =
     case Decode.decodeValue resumeDataDecoder payload of
         Ok resumeContent ->
             resumeContent
@@ -103,13 +103,13 @@ decode payload =
 
 view : ResumeModel -> Html Msg
 view model =
-    div [] (List.map resumeSectionVew model)
+    div [ class "resume" ] (List.map resumeSectionVew model)
 
 
 resumeSectionVew : Section -> Html Msg
 resumeSectionVew section =
-    div [ class section.class ]
-        [ h1 [] [ text section.heading ]
+    div [ class section.class, class "section-format" ]
+        [ strong [] [ text section.heading ]
         , text section.caption
         , div [] (resumeSectionDataView section.data)
         ]
