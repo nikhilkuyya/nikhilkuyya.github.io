@@ -7,9 +7,5 @@
 
 .section-format {
   position: relative;
-  padding-left: 3em;
-}
-
-.section-format:left {
-  border-left: 3px solid black;
+  padding-left: 40px;
 }
