@@ -4779,7 +4779,7 @@ var author$project$Main$init = function (_n0) {
 			A4(
 				author$project$Main$Section,
 				'Initial Data',
-				'',
+				elm$core$Maybe$Nothing,
 				'first',
 				author$project$Main$TextString('first data'))),
 		elm$core$Platform$Cmd$none);
@@ -4865,6 +4865,14 @@ var elm$json$Json$Decode$lazy = function (thunk) {
 };
 var elm$json$Json$Decode$list = _Json_decodeList;
 var elm$json$Json$Decode$map = _Json_map1;
+var elm$json$Json$Decode$nullable = function (decoder) {
+	return elm$json$Json$Decode$oneOf(
+		_List_fromArray(
+			[
+				elm$json$Json$Decode$null(elm$core$Maybe$Nothing),
+				A2(elm$json$Json$Decode$map, elm$core$Maybe$Just, decoder)
+			]));
+};
 var elm$json$Json$Decode$string = _Json_decodeString;
 function author$project$Main$cyclic$resumeSectionDecoder() {
 	return A3(
@@ -4879,8 +4887,8 @@ function author$project$Main$cyclic$resumeSectionDecoder() {
 			A4(
 				NoRedInk$json_decode_pipeline$Json$Decode$Pipeline$optional,
 				'caption',
-				elm$json$Json$Decode$string,
-				'default',
+				elm$json$Json$Decode$nullable(elm$json$Json$Decode$string),
+				elm$core$Maybe$Nothing,
 				A3(
 					NoRedInk$json_decode_pipeline$Json$Decode$Pipeline$required,
 					'heading',
@@ -4936,7 +4944,7 @@ var author$project$Main$runResumeModelDecoder = function (payload) {
 			A4(
 				author$project$Main$Section,
 				'Error',
-				'',
+				elm$core$Maybe$Nothing,
 				'temp',
 				author$project$Main$TextString(
 					elm$json$Json$Decode$errorToString(err))));
@@ -4958,6 +4966,35 @@ var author$project$Main$update = F2(
 			return _Utils_Tuple2(result, elm$core$Platform$Cmd$none);
 		}
 	});
+var author$project$Main$isNull = function (value) {
+	if (value.$ === 'Just') {
+		return false;
+	} else {
+		return true;
+	}
+};
+var elm$core$Basics$identity = function (x) {
+	return x;
+};
+var elm$virtual_dom$VirtualDom$toHandlerInt = function (handler) {
+	switch (handler.$) {
+		case 'Normal':
+			return 0;
+		case 'MayStopPropagation':
+			return 1;
+		case 'MayPreventDefault':
+			return 2;
+		default:
+			return 3;
+	}
+};
+var elm$html$Html$li = _VirtualDom_node('li');
+var author$project$Main$liView = function (child) {
+	return A2(
+		elm$html$Html$li,
+		_List_Nil,
+		elm$core$List$singleton(child));
+};
 var elm$core$List$foldrHelper = F4(
 	function (fn, acc, ctr, ls) {
 		if (!ls.b) {
@@ -5027,25 +5064,20 @@ var elm$core$List$map = F2(
 			_List_Nil,
 			xs);
 	});
-var elm$core$Basics$identity = function (x) {
-	return x;
-};
-var elm$virtual_dom$VirtualDom$toHandlerInt = function (handler) {
-	switch (handler.$) {
-		case 'Normal':
-			return 0;
-		case 'MayStopPropagation':
-			return 1;
-		case 'MayPreventDefault':
-			return 2;
-		default:
-			return 3;
-	}
-};
+var elm$core$Maybe$withDefault = F2(
+	function (_default, maybe) {
+		if (maybe.$ === 'Just') {
+			var value = maybe.a;
+			return value;
+		} else {
+			return _default;
+		}
+	});
 var elm$html$Html$div = _VirtualDom_node('div');
 var elm$html$Html$strong = _VirtualDom_node('strong');
 var elm$virtual_dom$VirtualDom$text = _VirtualDom_text;
 var elm$html$Html$text = elm$virtual_dom$VirtualDom$text;
+var elm$html$Html$ul = _VirtualDom_node('ul');
 var elm$json$Json$Encode$string = _Json_wrap;
 var elm$html$Html$Attributes$stringProperty = F2(
 	function (key, string) {
@@ -5055,6 +5087,15 @@ var elm$html$Html$Attributes$stringProperty = F2(
 			elm$json$Json$Encode$string(string));
 	});
 var elm$html$Html$Attributes$class = elm$html$Html$Attributes$stringProperty('className');
+var elm$json$Json$Encode$bool = _Json_wrap;
+var elm$html$Html$Attributes$boolProperty = F2(
+	function (key, bool) {
+		return A2(
+			_VirtualDom_property,
+			key,
+			elm$json$Json$Encode$bool(bool));
+	});
+var elm$html$Html$Attributes$hidden = elm$html$Html$Attributes$boolProperty('hidden');
 var author$project$Main$resumeSectionDataView = function (sectiondata) {
 	switch (sectiondata.$) {
 		case 'TextString':
@@ -5063,14 +5104,28 @@ var author$project$Main$resumeSectionDataView = function (sectiondata) {
 				elm$html$Html$text(data));
 		case 'ListTextString':
 			var data = sectiondata.a;
-			return A2(elm$core$List$map, elm$html$Html$text, data);
+			return elm$core$List$singleton(
+				A2(
+					elm$html$Html$ul,
+					_List_Nil,
+					A2(
+						elm$core$List$map,
+						author$project$Main$liView,
+						A2(elm$core$List$map, elm$html$Html$text, data))));
 		case 'SectionData':
 			var data = sectiondata.a;
 			return elm$core$List$singleton(
 				author$project$Main$resumeSectionVew(data));
 		default:
 			var data = sectiondata.a;
-			return A2(elm$core$List$map, author$project$Main$resumeSectionVew, data);
+			return elm$core$List$singleton(
+				A2(
+					elm$html$Html$ul,
+					_List_Nil,
+					A2(
+						elm$core$List$map,
+						author$project$Main$liView,
+						A2(elm$core$List$map, author$project$Main$resumeSectionVew, data))));
 	}
 };
 var author$project$Main$resumeSectionVew = function (section) {
@@ -5090,7 +5145,19 @@ var author$project$Main$resumeSectionVew = function (section) {
 					[
 						elm$html$Html$text(section.heading)
 					])),
-				elm$html$Html$text(section.caption),
+				A2(
+				elm$html$Html$div,
+				_List_fromArray(
+					[
+						elm$html$Html$Attributes$class('heading-caption'),
+						elm$html$Html$Attributes$hidden(
+						author$project$Main$isNull(section.caption))
+					]),
+				_List_fromArray(
+					[
+						elm$html$Html$text(
+						A2(elm$core$Maybe$withDefault, '', section.caption))
+					])),
 				A2(
 				elm$html$Html$div,
 				_List_Nil,

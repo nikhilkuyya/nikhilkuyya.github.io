@@ -14,7 +14,7 @@ loadContent([
       data: [
         {
           heading: "Associate",
-          caption: "Oct,2017 - Present",
+          caption: "Oct,2017 - April,2018",
           data: [
             {
               heading: "Responsible for shipping web pages for website.",
