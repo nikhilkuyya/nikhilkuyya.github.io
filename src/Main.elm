@@ -2,7 +2,7 @@ port module Main exposing (..)
 
 import Browser
 import Html exposing (..)
-import Html.Attributes exposing (class)
+import Html.Attributes exposing (class, hidden)
 import Html.Events exposing (..)
 import Http
 import Json.Decode as Decode exposing (..)
@@ -32,7 +32,7 @@ type alias ResumeModel =
 
 type alias Section =
     { heading : String
-    , caption : String
+    , caption : Maybe String
     , class : String
     , data : SectionDataType
     }
@@ -51,7 +51,7 @@ type SectionDataType
 
 init : () -> ( ResumeModel, Cmd Msg )
 init _ =
-    ( List.singleton (Section "Initial Data" "" "first" (TextString "first data"))
+    ( List.singleton (Section "Initial Data" Nothing "first" (TextString "first data"))
     , Cmd.none
     )
 
@@ -94,7 +94,7 @@ runResumeModelDecoder payload =
             resumeContent
 
         Err err ->
-            List.singleton (Section "Error" "" "temp" (TextString (Decode.errorToString err)))
+            List.singleton (Section "Error" Nothing "temp" (TextString (Decode.errorToString err)))
 
 
 
@@ -110,25 +110,46 @@ resumeSectionVew : Section -> Html Msg
 resumeSectionVew section =
     div [ class section.class, class "section-format" ]
         [ strong [] [ text section.heading ]
-        , text section.caption
+        , div [ class "heading-caption", hidden (isNull section.caption) ] [ text (Maybe.withDefault "" section.caption) ]
         , div [] (resumeSectionDataView section.data)
         ]
+
+
+isNull : Maybe a -> Bool
+isNull value =
+    case value of
+        Just _ ->
+            False
+
+        Nothing ->
+            True
 
 
 resumeSectionDataView : SectionDataType -> List (Html Msg)
 resumeSectionDataView sectiondata =
     case sectiondata of
         TextString data ->
-            List.singleton (text data)
+            List.singleton <| text data
 
         ListTextString data ->
             List.map text data
+                |> List.map liView
+                |> ul []
+                |> List.singleton
 
         SectionData data ->
             List.singleton (resumeSectionVew data)
 
         ListSectionData data ->
             List.map resumeSectionVew data
+                |> List.map liView
+                |> ul []
+                |> List.singleton
+
+
+liView : Html Msg -> Html Msg
+liView child =
+    li [] (List.singleton child)
 
 
 
@@ -144,7 +165,7 @@ resumeSectionDecoder : Decode.Decoder Section
 resumeSectionDecoder =
     Decode.succeed Section
         |> required "heading" Decode.string
-        |> optional "caption" Decode.string "default"
+        |> optional "caption" (Decode.nullable Decode.string) Nothing
         |> optional "class" Decode.string ""
         |> required "data" resumeSectionDataDecoder
 

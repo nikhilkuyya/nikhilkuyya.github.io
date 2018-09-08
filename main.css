@@ -1,11 +1,16 @@
 .resume {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: larger;
   align-content: center;
   padding-left: 20%;
   padding-right: 20%;
 }
 
-.section-format {
+.heading-caption {
   position: relative;
-  padding-left: 40px;
+  padding: 0.1em;
+}
+
+.resume > .section-format {
+  padding-bottom: 2em;
 }
