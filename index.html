@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, shrink-to-fit=0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+  <title>Nikhil Kuyya</title>
+  <style>
+    html {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    body {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: row;
+      margin: 0;
+    }
+
+    canvas {
+      margin: auto;
+      display: block;
+      box-shadow: 0px 2px 12px -2px rgba(0, 0, 0, 0.15);
+    }
+  </style>
+</head>
+
+<body>
+  <div>
+    <h2>Greetings !! </h2>
+    <div>
+      <div>To Know about me, Please Visit: </div>
+      <br/>
+      <a href="https://www.github.com/nikhilkuyya" target="blank">Github</a> |
+      <a href="https://www.linkedin.com/in/nikhil-kuyya/" target="blank">LinkedIn</a>
+    </div>
+    <p>Thank you for visiting this website, Page is under developement.</p>
+    <div>
+        <div>
+            <span>The Cat is coding the webiste. We will be right back in a week or so.</span>
+        </div>
+        <div>            
+                <svg id="catsvg" width="200" height="100" viewBox="0 0 480 240">
+                    <title>CAT </title>
+                    <desc>Stck Figure of a Cat.</desc>
+                    <!-- cat face circle : with inline style elements-->
+                    <circle cx="70" cy="70" r="50" style="stroke:cyan;" fill="#338" />
+                    <!-- cat eyes style attributes can be individual elments-->
+                    <circle cx="55" cy="50" r="5" stroke="brown" fill="gold" />
+                    <circle cx="85" cy="50" r="5" stroke="brown" fill="gold" />
+                    <!-- moustache for common things use groups-->
+                    <g id="whiskers" style="stroke:gold">
+                        <line x1="75" y1="80" x2="135" y2="70" />
+                        <line x1="75" y1="80" x2="135" y2="90" />
+                    </g>
+                    <!-- moustache by reusing the elements already drawn -->
+                    <use href="#whiskers" transform="scale(-1,1) translate(-140,0)" />
+
+                    <!-- smile and ear are just made one group -->
+                    <g fill="none">
+                        <polyline points="45,90 90,90" stroke="brown" />
+                        <polyline id="leftear" points="36 140, 30 25, 40 29" stroke="green" />
+                        <use href="#leftear" transform="translate(140,0) scale(-1,1)" />
+                    </g>
+
+                    <!-- mouth basic element in svg -->
+                    <path d="M 75 70 L 65 70 A 5 10 0 0 0 75 70" stroke="purple" fill="blue" />
+                </svg>
+
+            
+        </div>
+    </div>
+  </div>
+  <div id="canvas"></div>
+  <script src="index.js"></script>
+</body>
+
+</html>
