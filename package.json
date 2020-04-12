@@ -7,7 +7,7 @@
   "author": "nikhilkuyya <nikhilkuyya@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "build:elm": "elm.exe make .\\src\\Main.elm --output .\\dist\\elm.js"
+    "build:elm": "elm make ./src/Main.elm --output ./dist/elm.js"
   },
   "devDependencies": {}
 }

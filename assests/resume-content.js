@@ -2,13 +2,32 @@ loadContent([
   {
     heading: "Career Summary",
     class: "career-summary",
-    data:
-      "I work on Front End Technologies, also had experience in the Back-End development. I am inclined to work with different technologies with good practices and worked on diverse projects to gain an understanding of the software development process."
+    data:[
+      "I am Web Developer, contribute majorly in front end development the web sites with good understanding in API developement.",
+      "Last but not least I like to learn, relearn."
+    ]      
   },
   {
     heading: "Work Experience",
     class: "work-experience",
-    data: {
+    data: [{
+      heading: "Talentas",
+      caption: "Hyderabad,India",
+      data: [
+        {
+          heading: "UI Developer",
+          caption: "Dec,2018 - Current",
+          data: [
+            {
+              heading: "Test",
+              data: [   
+                "test"             
+              ]
+            }
+          ]
+        }
+      ]
+    },{
       heading: "Nagarro",
       caption: "Gurgaon,India",
       data: [
@@ -17,10 +36,10 @@ loadContent([
           caption: "Oct,2017 - April,2018",
           data: [
             {
-              heading: "Responsible for shipping web pages for website.",
+              heading: "I was active contributor,Responsible for shipping major feature for website.",
               data: [
                 "Understanding the requirements clearly and building components for pages",
-                "Building modules for pages, from scratch, if need or using appropriate libraries for development.",
+                "Building modules for pages, from scratch, if need using appropriate libraries for development.",
                 "Worked on the distinct sections for websites with documentation for the work."
               ]
             }
@@ -41,6 +60,6 @@ loadContent([
           ]
         }
       ]
-    }
+    }]
   }
 ]);

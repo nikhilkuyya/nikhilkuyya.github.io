@@ -109,7 +109,7 @@ view model =
 resumeSectionVew : Section -> Html Msg
 resumeSectionVew section =
     div [ class section.class, class "section-format" ]
-        [ strong [] [ text section.heading ]
+        [ strong [class "heading"] [ text section.heading ]
         , div [ class "heading-caption", hidden (isNull section.caption) ] [ text (Maybe.withDefault "" section.caption) ]
         , div [] (resumeSectionDataView section.data)
         ]

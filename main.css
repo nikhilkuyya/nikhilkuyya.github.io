@@ -1,16 +1,22 @@
+.body {
+  font-family: Lato, "open sans", roboto "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+.heading {
+  font-family: Oswald, "Noto sans TC", "Fjlia one", Lato, "open sans", roboto "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
 .resume {
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  font-size: larger;
+  font-size: medium;
   align-content: center;
   padding-left: 20%;
   padding-right: 20%;
 }
 
-.heading-caption {
+.caption {
   position: relative;
   padding: 0.1em;
 }
 
 .resume > .section-format {
-  padding-bottom: 2em;
+  padding-bottom: 1rem;
 }
