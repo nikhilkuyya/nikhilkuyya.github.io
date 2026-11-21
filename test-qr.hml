@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Downloading App...</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            text-align: center;
+            padding: 50px 20px;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        h2 { margin-bottom: 10px; }
+        p { color: #666; margin-bottom: 30px; }
+        .button {
+            display: inline-block;
+            padding: 12px 24px;
+            margin: 10px;
+            border-radius: 8px;
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            transition: opacity 0.2s;
+        }
+        .apple { background-color: #000000; }
+        .google { background-color: #34A853; }
+        .button:hover { opacity: 0.8; }
+    </style>
+</head>
+<body>
+
+    <h2>Redirecting to your app store...</h2>
+    <p>If nothing happens automatically, please choose your platform below:</p>
+
+    <!-- Fallback Buttons -->
+    <a href="https://apps.apple.com/app/id1585944651" class="button apple" id="ios-link">Download for iOS</a>
+    <a href="https://play.google.com/store/apps/details?id=com.irakyatmob.bkrm" class="button google" id="android-link">Download for Android</a>
+
+    <script>
+        // 1. Define your app store links
+        const iosUrl = "https://apps.apple.com/app/id1585944651";
+        const androidUrl = "https://play.google.com/store/apps/details?id=com.irakyatmob.bkrm";
+
+        // 2. Detect device operating system
+        function detectAndRedirect() {
+            const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+            // iOS detection (iPhone, iPod, iPad)
+            if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+                window.location.replace(iosUrl);
+            } 
+            // Android detection
+            else if (/android/i.test(userAgent)) {
+                window.location.replace(androidUrl);
+            }
+            // Desktop or other OS: Do nothing, let them click the buttons.
+        }
+
+        // 3. Run the redirect as soon as the page loads
+        window.onload = detectAndRedirect;
+    </script>
+
+</body>
+</html>
